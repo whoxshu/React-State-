@@ -5,6 +5,7 @@ import Lottery from './Lottery';
 import TicketNum from './TicketNum';
 import Ticket from './Ticket';
 import { sum } from './helper';
+import Form from './Form';
 
 function App() {
   let winCondition = (ticket) => {
@@ -13,7 +14,8 @@ function App() {
 
   return (
     <>
-<Lottery  n={3} winCondition={winCondition}></Lottery>
+{/* <Lottery  n={3} winCondition={winCondition}></Lottery>*/}
+<Form></Form>
     </>
   );
 };
