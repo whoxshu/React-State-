@@ -6,16 +6,20 @@ import TicketNum from './TicketNum';
 import Ticket from './Ticket';
 import { sum } from './helper';
 import Form from './Form';
+import CommentsForm from './CommentsForm';
+import Comment from "./Comment";
 
-function App() {
-  let winCondition = (ticket) => {
-    return sum(ticket) === 15;
-  };
+ function App() {
+  // let winCondition = (ticket) => {
+  //   return sum(ticket) === 15;
+  // };
 
   return (
     <>
 {/* <Lottery  n={3} winCondition={winCondition}></Lottery>*/}
-<Form></Form>
+{/* <Form></Form> */}
+ {/* <CommentsForm></CommentsForm>  */}
+<Comment></Comment>
     </>
   );
 };
