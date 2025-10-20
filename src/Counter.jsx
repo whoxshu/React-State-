@@ -1,25 +1,30 @@
-import { useState } from "react";
 
-export default function Counter(){
- let [count, setCount] = useState(0);
-console.log("Component is rerendered!");
-// console.log(`count=${count}`);
- let incCount = () => {
-    // setCount((currCount)=>{
-    //     return currCount + 1;
-    // });
-    //  setCount((currCount)=>{
-    //     return currCount + 1;
-    // });
-    // setCount(count+1) ;
-    setCount(25);
- }
+import { useState, useEffect } from "react";
 
+export default function Counter() {
 
-    return(
-        <div>
-            <h3>Count = {count}</h3>
-            <button onClick= {incCount}>Increase Count</button>
-        </div>
+let [countx, setCountx] = useState(0); 
+let [county, setCounty] = useState(0); 
+
+const incCountx = () => {
+     setCountx((currCount) => currCount + 1);
+ };
+
+ const incCounty = () => {
+     setCounty((currCount) => currCount + 1);
+ };
+
+useEffect (function sideEffect() {
+     console.log("this is the side effect");
+     },
+    [countx]);
+
+return ( 
+ <div> 
+    <h3>Countx = {countx}</h3>
+     <button onClick={incCountx}>+1</button> 
+       <h3>County = {county}</h3>
+     <button onClick={incCounty}>+1</button> 
+     </div>
     );
 }
